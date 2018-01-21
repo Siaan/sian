@@ -30,7 +30,20 @@
 		<link rel="stylesheet" href="assets/css/responsivre.css" />
 
 		<script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"> </script> 
-
+		<script type="text/javascript">
+			window.onload = function(){ 
+				//Get submit button
+				var submitbutton = document.getElementById("tfq");
+				//Add listener to submit button
+				if(submitbutton.addEventListener){
+				submitbutton.addEventListener("click", function() {
+					if (submitbutton.value == 'Search our website'){//Customize this text string to whatever you want
+						submitbutton.value = '';
+					}
+				});
+			}
+		}
+		</script>
 	</head>
 	<body data-spy="scroll" data-target="#navmenu">
 		
@@ -71,11 +84,13 @@
 						<div class="main_slider_area">
 							<div class="slider">
 								<div class="single_slider wow fadeIn" data-wow-duration="2s">
-									<p>
-									<h2> WELCOME to the Automatic Records </h2> 
-									</p>   
-									<p> <h2> of Clinical Health, ARCHives. </h2> </p>
-									<p> The easiest way to share dental records among specialists</p>
+									<h2> Welcome to ARCHives Support Services </h2>
+								</div>
+								<div id="tfheader">
+									<form id="tfnewsearch" method="get" action="http://www.google.com">
+									        <input type="text" id="tfq" class="tftextinput2" name="q" size="50" maxlength="120" value="Search our website"><input type="submit" class="tfbutton2">
+									</form>
+								<div class="tfclear"></div>
 								</div>
 							</div>
 						</div>
@@ -85,56 +100,6 @@
 		</section>
 
 
-		<section id="domain" class="domainsearce">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-10 col-sm-offset-1">
-						<div class="main_somainsearrce">
-							<div class="head_title text-center wow fadeInDown" data-wow-durationb="1s">
-								<h2> Discover your Smile  </h2> 
-								<p> ARCHives allows the easy sharing of dental medical forms online among dentists. With the click of a button, all of your dental records can be transferred to another dentist to avoid the tedious mandatory prelimary process upon joining a new dental association. Join today!</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section id="clients" class="comments">
-			<div class="overlay-fluid-block">
-				<div class="container">
-					<div class ="row">
-						<div class="main_comments wow fadeInUp" data-wow-duration="1.5s">
-							<div class="main_comments_contents">
-								<div class="single_comments text-center">
-									<p> "You never have to delay your appointment ever again." </p>
-									<a href=""> </a>
-								</div>
-								<div class="single_comments text-center">
-									<p> "Your dentist will be familiarized with you before you even walk through the door." </p>
-									<a href=""> </a>
-								</div>
-								<div class="single_comments text-center">
-									<p> "Switching to a new dentist is now easier than ever!" </p>
-									<a href="">  </a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-
-
-								
-		
-
-
-
-
-
-		
 	</body>	
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap.min.js"> </script> 
