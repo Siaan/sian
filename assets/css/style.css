@@ -1160,3 +1160,7 @@ i:hover{
 .tfclear{
 clear:both;
 }
+
+#helpID{
+	font-size:12px;
+}
